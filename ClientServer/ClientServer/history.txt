@@ -1,0 +1,3 @@
+Pass:Pass Login: Login
+Psss:Pass1 Login: Login1
+Новый участник вошёл в чат!
