@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6086391c-382a-4f16-8520-09c4e168061a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/ClientServer/Coil/Coil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ClientServer/Lesson_4/Lesson_4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ClientServer/server/Main$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Coil/Coil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lesson_4/Lesson_4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientServer/META-INF/ClientServer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientServer/server/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientServer/server/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientServer/server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientServer/server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientServer/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientServer/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,6 +216,13 @@
       <workItem from="1582708479430" duration="8254000" />
       <workItem from="1582784237191" duration="3001000" />
       <workItem from="1582799058066" duration="163000" />
+      <workItem from="1582829866704" duration="5126000" />
+      <workItem from="1582869449935" duration="6981000" />
+      <workItem from="1582899191583" duration="4318000" />
+      <workItem from="1582905132437" duration="4722000" />
+      <workItem from="1582924186293" duration="186000" />
+      <workItem from="1583083347410" duration="8193000" />
+      <workItem from="1583172797277" duration="3618000" />
     </task>
     <servers />
   </component>
@@ -216,7 +234,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -240,48 +260,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/client/ClientWindow.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/server/Main.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/ClientWindow.java</url>
-          <line>216</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/ClientWindow.java</url>
           <line>40</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/ClientWindow.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/Fil.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/Fil.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/Fil.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/client/Fil.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/src/server/ClientHandler.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

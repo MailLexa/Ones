@@ -5,8 +5,10 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class Server {
+public  class Server {
 		// порт, который будет прослушивать наш сервер
     static final int PORT = 3443;
 		// список клиентов, которые будут подключаться к серверу
@@ -21,18 +23,23 @@ public class Server {
         try {
 						// создаём серверный сокет на определенном порту
             serverSocket = new ServerSocket(PORT);
-            System.out.println("Сервер запущен!");
+  //          System.out.println("Сервер запущен!");
 						// запускаем бесконечный цикл
             while (true) {
 								// таким образом ждём подключений от сервера
                 clientSocket = serverSocket.accept();
 								// создаём обработчик клиента, который подключился к серверу
 								// this - это наш сервер
-                ClientHandler client = new ClientHandler(clientSocket, this);
-                System.out.println(client);
-                clients.add(client);
+
 								// каждое подключение клиента обрабатываем в новом потоке
-                new Thread(client).start();
+                ClientHandler client = new ClientHandler(clientSocket, this);
+   //             System.out.println("\n"+client);
+                clients.add(client);
+
+                ExecutorService executorService = Executors.newFixedThreadPool(8);
+                executorService.execute( client);
+                executorService.shutdown();
+              //  new Thread(client).start();
             }
         }
         catch (IOException ex) {
