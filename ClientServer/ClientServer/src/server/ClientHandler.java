@@ -6,9 +6,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class ClientHandler implements Runnable {
-		
+    private static Logger log = Logger.getLogger(Server.class.getName());
 		// экземпляр нашего сервера
     private Server server;
 		// исходящее сообщение
@@ -49,11 +50,13 @@ public class ClientHandler implements Runnable {
             while (true) {
                 // Если от клиента пришло сообщение
                 if (inMessage.hasNext()) {
+                    System.out.println("\n Пришло сообщение");
+                    log.info("Пришло сообщение");
                     String clientMessage = inMessage.nextLine();
-                    System.out.println(clientMessage + '1');
-                    System.out.println(Text1(clientMessage,1));
+                   // System.out.println(clientMessage + '1');
+                    //System.out.println(Text1(clientMessage,1));
 
-                     System.out.println(Autin(Text1(clientMessage,1)));
+                    // System.out.println(Autin(Text1(clientMessage,1)));
 										// если клиент отправляет данное сообщение, то цикл прерывается и 
 										// клиент выходит из чата
                     if (clientMessage.equalsIgnoreCase("##session##end##")) {

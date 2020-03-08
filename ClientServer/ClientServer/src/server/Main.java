@@ -6,6 +6,7 @@ import java.util.concurrent.*;
 import client.ClientWindow;
 import Lesson_4.Lesson_4;
 import Coil.Coil;
+import Lesson6.Massiv.*;
 
 public class Main {
 
@@ -35,11 +36,16 @@ public class Main {
           //  executorService.execute(new Runnable(){  new Server());}
         //    executorService.execute((Runnable) new ClientWindow());
              executorService.shutdown();
-             Lesson_4 w = new Lesson_4();
-             Lesson_4.main();
+    //         Lesson_4 w = new Lesson_4();
+     //        Lesson_4.main();
          //   Coil r = new Coil(130,0.0,0.05);
           //  r.calculation();
-
+        Integer [] u= {1,2,3,4,5,6,7,8};
+      Lesson6.Massiv Les = new Lesson6.Massiv();
+      u = Les.OutMassiv(u);
+        for (Integer i=0; i<u.length;i++){
+            System.out.println(u[i]);
+        }
 
 
        // ClientWindow clientWindow_1 = new ClientWindow();

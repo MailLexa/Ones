@@ -7,12 +7,19 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
+
+
 
 public  class Server {
 		// порт, который будет прослушивать наш сервер
     static final int PORT = 3443;
 		// список клиентов, которые будут подключаться к серверу
     private ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
+    private static Logger log = Logger.getLogger(Server.class.getName());
+
+
+
 
     public Server() {
 				// сокет клиента, это некий поток, который будет подключаться к серверу
@@ -23,7 +30,8 @@ public  class Server {
         try {
 						// создаём серверный сокет на определенном порту
             serverSocket = new ServerSocket(PORT);
-  //          System.out.println("Сервер запущен!");
+           System.out.println("Сервер запущен!");
+           log.info("Сервер запущен ");
 						// запускаем бесконечный цикл
             while (true) {
 								// таким образом ждём подключений от сервера
@@ -33,7 +41,8 @@ public  class Server {
 
 								// каждое подключение клиента обрабатываем в новом потоке
                 ClientHandler client = new ClientHandler(clientSocket, this);
-   //             System.out.println("\n"+client);
+               System.out.println("\n"+"Новый клиент подключился");
+               log.info("Новый клиент подключился");
                 clients.add(client);
 
                 ExecutorService executorService = Executors.newFixedThreadPool(8);
@@ -44,16 +53,20 @@ public  class Server {
         }
         catch (IOException ex) {
             ex.printStackTrace();
+            System.out.println("\nПроизошла ошибка");
+            log.info("Произошла ошибка");
         }
         finally {
             try {
 								// закрываем подключение
                 clientSocket.close();
                 System.out.println("Сервер остановлен");
+                log.info("Сервер остановлен");
                 serverSocket.close();
             }
             catch (IOException ex) {
                 ex.printStackTrace();
+
             }
         }
     }
